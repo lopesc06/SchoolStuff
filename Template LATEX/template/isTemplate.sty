@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  isTemplate.sty                                                    %
+%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{template/isTemplate}[2015/05/30, v1.0 ESCOM-IPN Plantilla para materia de ingeniería de software]
+
+\usepackage[utf8]{inputenc}                      % Codificación de caracteres en UTF-8.
+\usepackage[spanish,es-tabla]{babel}                      % Cambia las variables del documento a español.
+\usepackage{graphicx}	                         % Manejo de imágenes.
+\usepackage[usenames,dvipsnames]{color}          % Para usar y definir colores.
+\usepackage{wallpaper}                           % Colocar imágenes en el fondo del documento.
+\usepackage{fancyhdr}                            % Manejo de encabezados.
+\usepackage[hmargin=3cm,vmargin=3.5cm]{geometry} % Manejo de márgenes del documento.
+\usepackage{sectsty}
+\usepackage[Sonny]{fncychap}                     % Manejo de capítulos: Sonny, Lenny, Glenn, Conny, Rejne and Bjarne.
+
+%=====================================================
+% Definición de colores
+\definecolor{mainColor}{rgb}{0.0, 0.15, 0.6}
+\definecolor{secondColor}{rgb}{0.1, 0.3, 0.9}
+\definecolor{aquaColor}{rgb}{0.8, 0.9, 1}
+\definecolor{grayColor}{rgb}{0.5, 0.5, 0.5}
+\definecolor{instructionsColor}{rgb}{0.5, 0.5, 0.5}
+
+%=====================================================
+% Variables
+
+\newcommand{\varDireccion}{Av. Juan de Dios Bátiz esq. Miguel Othón de Mendizabal S/N Col. Lindavista, GAM, D. F.}
+\newcommand{\direccion}[1]{\renewcommand{\varDireccion}{#1}}
+
+\newcommand{\varTelefono}{+52 55 57296000 Ext 52032.}
+\newcommand{\telefono}[1]{\renewcommand{\varTelefono}{#1}}
+
+\newcommand{\varCorreo}{ulises.velez@gmail.com}
+\newcommand{\correo}[1]{\renewcommand{\varCorreo}{#1}}
+
+%=====================================================
+% Encabezados y Pie de página
+
+\pagestyle{fancy}
+\fancyhead[LE]{\includegraphics[height=35pt]{template/headerPar}} 
+\fancyhead[RO]{\includegraphics[height=35pt]{template/headerInp}} 
+\fancyhead[RE]{} 
+\fancyhead[LO]{} 
+
+\addtolength{\headheight}{2\baselineskip} 
+\fancyfoot[CO,CE]{{\tiny\color{secondColor}\em \varDireccion, Tel. \varTelefono, Mail: \varCorreo}}
+\fancyfoot[RO,LE]{\footnotesize\thepage}
+
+
+%=====================================================
+% Portada
+
+\newcommand{\varSubTitle}{}
+\newcommand{\subtitle}[1]{\renewcommand{\varSubTitle}{#1}}
+
+\newcommand{\varTitle}[1]{}
+\let\varTitle=\title
+\renewcommand{\title}[1]{%	
+	\varTitle{{\Huge\color{mainColor}#1}%
+	\\{\LARGE \color{secondColor}\varSubTitle}~{}\bigskip\\\color{mainColor}\rule{\textwidth}{1mm}}%
+}
+
+\newcommand{\varOrganization}{Escuela Superior de Cómputo, IPN}
+\newcommand{\organization}[1]{\renewcommand{\varOrganization}{#1}}
+
+
+\newcommand{\varAuthor}[1]{}
+\let\varAuthor=\author
+\renewcommand{\author}[1]{%
+	\varAuthor{\color{mainColor}#1\\\color{mainColor}\varOrganization}%
+}
+
+%=====================================================
+
+\sectionfont{\color{mainColor}}  
+\subsectionfont{\color{mainColor}}
+
+\ChTitleVar{\Large\sf\color{mainColor}}
+\ChNumVar{\Huge\color{secondColor}}
+\ChNameVar{\Large\sf\color{secondColor}}
+
+
+%=====================================================
+\newcommand{\Instrucciones}[1]{}
+\newcommand{\varInstrucciones}[1]{{\em\color{instructionsColor}#1}}
+\newcommand{\showInstrucciones}{%
+	\let\Instrucciones=\varInstrucciones%
+}
+

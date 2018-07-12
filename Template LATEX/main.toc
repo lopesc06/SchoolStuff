@@ -1,0 +1,41 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
+\contentsline {section}{\numberline {1.1}Prop\IeC {\'o}sito}{1}
+\contentsline {section}{\numberline {1.2}Alcance}{1}
+\contentsline {section}{\numberline {1.3}Definiciones y acr\IeC {\'o}nimos}{1}
+\contentsline {section}{\numberline {1.4}referencias}{2}
+\contentsline {chapter}{\numberline {2}Glosario de t\IeC {\'e}rminos}{3}
+\contentsline {chapter}{\numberline {3}Justificaci\IeC {\'o}n del Proyecto}{5}
+\contentsline {section}{\numberline {3.1}Antecedentes}{5}
+\contentsline {section}{\numberline {3.2}Descripci\IeC {\'o}n de la problem\IeC {\'a}tica}{5}
+\contentsline {section}{\numberline {3.3}Soluciones en el mercado}{6}
+\contentsline {section}{\numberline {3.4}Propuesta de soluci\IeC {\'o}n}{6}
+\contentsline {section}{\numberline {3.5}Beneficios esperados}{6}
+\contentsline {chapter}{\numberline {4}Descripci\IeC {\'o}n de la propuesta}{9}
+\contentsline {section}{\numberline {4.1}Objetivo general}{9}
+\contentsline {section}{\numberline {4.2}Objetivos espec\IeC {\'\i }ficos}{9}
+\contentsline {section}{\numberline {4.3}Requerimientos del usuario}{9}
+\contentsline {section}{\numberline {4.4}Requerimientos del negocio}{14}
+\contentsline {section}{\numberline {4.5}Requerimientos funcionales}{14}
+\contentsline {section}{\numberline {4.6}Requerimientos de plataforma}{14}
+\contentsline {subsection}{\numberline {4.6.1}Requerimientos de Hardware}{14}
+\contentsline {subsection}{\numberline {4.6.2}Requerimientos de Software}{14}
+\contentsline {subsection}{\numberline {4.6.3}Red y otros servicios}{14}
+\contentsline {subsection}{\numberline {4.6.4}Interacci\IeC {\'o}n con otros sistemas}{15}
+\contentsline {section}{\numberline {4.7}Requerimientos de interacci\IeC {\'o}n con el usuario}{15}
+\contentsline {section}{\numberline {4.8}Datos e informaci\IeC {\'o}n que debe manejar el sistema}{15}
+\contentsline {section}{\numberline {4.9}Propiedades no funcionales del sistema}{15}
+\contentsline {subsection}{\numberline {4.9.1}Desempe\IeC {\~n}o}{15}
+\contentsline {subsection}{\numberline {4.9.2}Fiabilidad}{15}
+\contentsline {subsection}{\numberline {4.9.3}Disponibilidad}{15}
+\contentsline {subsection}{\numberline {4.9.4}Seguridad}{16}
+\contentsline {subsection}{\numberline {4.9.5}Mantenibilidad}{16}
+\contentsline {subsection}{\numberline {4.9.6}Portabilidad}{16}
+\contentsline {section}{\numberline {4.10}Alcance para el curso}{16}
+\contentsline {chapter}{\numberline {5}Plan de trabajo}{17}
+\contentsline {section}{\numberline {5.1}Descripci\IeC {\'o}n metodol\IeC {\'o}gica}{17}
+\contentsline {section}{\numberline {5.2}Desglose de actividades}{17}
+\contentsline {section}{\numberline {5.3}Cronograma de actividades}{18}
+\contentsline {section}{\numberline {5.4}Equipo de trabajo}{18}
+\contentsline {section}{\numberline {5.5}Entregables}{18}
+\contentsline {section}{\numberline {5.6}Resumen de tiempo y costo}{18}
