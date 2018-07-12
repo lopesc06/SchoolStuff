@@ -1,0 +1,27 @@
+struct entrada
+{
+	int arg1;
+	int arg2;
+};
+
+program CALC
+{
+	version SUMA
+	{
+		int sumar (entrada) = 1;
+	}
+	version RESTA
+	{
+		int restar (entrada) = 1;
+	}
+
+	version MULTIPLICAR
+	{
+		int mult (entrada) = 1;
+	}
+
+	version DIV
+	{
+		int dic	}
+
+}

@@ -1,0 +1,48 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU10}{Consulta  de todos los  Choferes}{
+	Un actor que desea consultar información correspondiente a  choferes accede al sistema e indica mostrar datos de los choferes, así el sistema realiza una busqueda para mostrar los datos del chofer.
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.2}
+	\UCitem{Autor}{Ivan Baltazar Camacho}
+	\UCitem{Modificado}{27 - Nov - 2015}
+	\UCitem{Revisor}{Juan Daniel López Santiago.}
+	\UCitem{Revisado}{30 - Nov - 2015}
+	\UCitem{Status}{Aprobado}
+	\UCitem{Aprobado}{30 - Nov - 2015}
+	\UCitem{Madurez}{Alta}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Media}
+	\UCitem{Prioridad}{Media}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Directora General de Regulación y Vigilancia Ambiental, Subdirector y Jefe de Unidad Departamental de la DPASR, Director de la DPASR, 1er Asesor Técnico de la DPASR y Subdirector de Sistemas}
+	\UCitem{Propósito}{Ser una fuente de consulta confiable para obtener datos con respecto a los distintos choferes y la manera en como operan los diferentes vehículos recolectores.}
+	\UCitem{Entradas}{Seleccion de la opción mostrar todos los conductores en el menu vehiculo recolector}
+	\UCitem{Salidas}{Nombre,Apellido Paterno,Apellido Materno,	CURP,Licencia de Manejo,Email,Teléfonos,Actividad}
+	\UCitem{Origenes}{Teclado y/o mouse.}
+	\UCitem{Destinos}{Pantalla }
+	\UCitem{Precondiciones}{Los datos del Chofer deben estar registrados con  anterioridad.}
+	\UCitem{Postcondiciones}{Se mostrarán los datos correspondientes a los Choferes}
+	\UCitem{Errores}{Que no haya resgistros existentes de choferes.}
+	\UCitem{Fuentes}{Manual de Usuario SIRS.}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Usuario  y Contraseña en el sistema vía teclado en la  \IUref{UI}{Pantalla  login de usuarios}.(Incluye CU Login Usuario)
+	\UCpaso[\UCactor]Selecciona la opcion Lista choferes del menu Vehiculos recolectores
+	\UCpaso Verifica que existan  registros de choferes.\Trayref{A}.
+	\UCpaso Despliega la \IUref{UI}{Pantalla de Consulta Lista Chofer} con los datos correspondientes a los Choferes.
+\end{UCtrayectoria}
+	
+
+	\begin{UCtrayectoriaA}{A}{No existe ningun registro.}
+		\UCpaso Muestra el Mensaje {\bf MSG4-}''No se encontraron Coincidencias.''
+		\UCpaso[\UCactor] Oprime el botón \IUbutton{Aceptar}.
+		\UCpaso Continua en el paso 1 del \UCref{CU10}.
+	\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

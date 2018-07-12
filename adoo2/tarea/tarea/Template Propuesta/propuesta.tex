@@ -1,0 +1,395 @@
+
+%--------------------------------------------------------------------
+\section{Objetivo general}
+Desarrollar un sistema de información enfocado a la gestión de información en materia de residuos sólidos, esto para poder analizar la cantidad de residuos sólidos generados por delegación, y con base a esto tomar políticas y lineamientos.
+
+%--------------------------------------------------------------------
+\section{Objetivos específicos}
+
+\begin{itemize}
+	\item Facilitar el origen, destino, ruta y la cantidad de residuos sólidos de cada vehículo destinado al transporte de residuos.
+	
+	\item Permitir modificar, eliminar o crear nuevos reportes para el inventario de residuos.
+	
+	\item Posibilidad de inhabilitar de manera temporal una ruta en específico de cierto transporte de residuos.
+\end{itemize}
+
+%--------------------------------------------------------------------
+\section{Requerimientos del usuario}
+\begin{itemize}
+	\item \textbf{Directora General de Regulación y Vigilancia Ambiental}
+	\item \textbf{Subdirector y JUDs de la DPASR}
+	\begin{itemize}
+		\item El usuario necesita conocer la información siguiente con respecto a las 16  delegaciones del Distrito Federal.
+		\begin{itemize}
+			\item Número de Toneladas de Generación de residuos por día.
+			\item Sitios de disposición final.
+			\item Rutas y sitios de recolección.
+			\item Vehículos recolectores.
+			\item Estaciones de Transferencia.
+			\item Plantas de Selección.
+			\item Plantas de Composta.
+			\\\\\\\\
+		\end{itemize}
+		\item El usuario necesita conocer la información siguiente con respecto a los 3 diferentes tipos de planes de manejo.
+		\begin{itemize}
+			\item Cantidad de los residuos que se generan  por establecimiento y cuál es su fuente de generación
+			\item Características del residuo
+			\item Justificación del plan de manejo        
+			\item Participantes
+			\item Procedimiento de recepción  de los residuos
+			\item Almacenamiento
+			\item Procedimiento de recepción    
+			\item Procedimiento de  recolección
+			\item Destino final
+			\item Metas del plan de manejo
+		\end{itemize}
+		\item El usuario necesita conocer la información siguiente con respecto a la infraestructura conformada por 12 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final.
+		\begin{itemize}
+			\item Nombre de la Planta
+			\item Ubicación
+			\item Superficie 
+			\item Número de trabajadores
+			\item Maquinaria
+			\item Capacidad de operación 
+			\item Descripción de la forma de operación
+		\end{itemize}
+		\item El Usuario necesita consultar los siguientes 3 diferentes tipos de informes.
+			\begin{itemize}
+				\item Delegaciones
+				\item Planes de Manejo
+				\item Infraestructura
+			\end{itemize}
+	\end{itemize}
+	\item\textbf{Director de Proyectos de Agua, Suelo y Residuos}
+	\begin{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a las 16  delegaciones del Distrito Federal.
+		\begin{itemize}
+			\item Número de Toneladas de Generación de residuos por día.
+			\item Sitios de disposición final.
+			\item Rutas y sitios de recolección.
+			\item Vehículos recolectores.
+			\item Estaciones de Transferencia.
+			\item Plantas de Selección.
+			\item Plantas de Composta.
+		\end{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a los 3 diferentes tipos de planes de manejo.
+		\begin{itemize}
+			\item Cantidad de los residuos que se generan  por establecimiento y cuál es su fuente de generación
+			\item Características del residuo
+			\item Justificación del plan de manejo        
+			\item Participantes
+			\item Procedimiento de recepción  de los residuos
+			\item Almacenamiento
+			\item Procedimiento de recepción    
+			\item Procedimiento de  recolección
+			\item Destino final
+			\item Metas del plan de manejo
+		\end{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a la infraestructura conformada por 12 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final.
+		\begin{itemize}
+			\item Nombre de la Planta
+			\item Ubicación
+			\item Superficie 
+			\item Número de trabajadores
+			\item Maquinaria
+			\item Capacidad de operación 
+			\item Descripción de la forma de operación
+		\end{itemize}
+		\item El Usuario necesita consultar los siguientes 3 diferentes tipos de informes.
+		\begin{itemize}
+			\item Delegaciones
+			\item Planes de Manejo
+			\item Infraestructura
+		\end{itemize}
+		\item El usuario necesita crear nuevos usuarios, eliminar y modificar los ya existentes.
+	\end{itemize}
+	\item \textbf{1er Asesor técnico de la DPASR }
+	\begin{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a las 16  delegaciones del Distrito Federal.
+		\begin{itemize}
+			\item Toneladas de Generación de residuos por día
+			\item Sitios de disposición final.
+			\item Rutas y sitios de recolección.
+			\item Vehículos recolectores.
+			\item Estaciones de Transferencia.
+			\item Plantas de Selección.
+			\item Plantas de Composta
+		\end{itemize}
+		\item El Usuario necesita consultar sólo el 1er tipo de informe(Delegaciones).
+	\end{itemize}
+	
+		\item \textbf{2do Asesor técnico de la DPASR }
+		\begin{itemize}
+			\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a los 3 diferentes tipos de planes de manejo
+			\begin{itemize}
+				\item Cantidad de los residuos que se generan  por establecimiento y cuál es su fuente de generación
+				\item Características del residuo
+				\item Justificación del plan de manejo        
+				\item Participantes
+				\item Procedimiento de recepción  de los residuos
+				\item Almacenamiento
+				\item Procedimiento de recepción    
+				\item Procedimiento de  recolección
+				\item Destino final
+				\item Metas del plan de manejo
+			\end{itemize}
+			\item El Usuario necesita consultar sólo el 2do tipo de informe(Planes de Manejo).
+		\end{itemize}
+	\item \textbf{3er Asesor técnico de la DPASR}
+	\begin{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a la infraestructura conformada por 12 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final.
+		\begin{itemize}
+				\item Nombre de la Planta
+				\item Ubicación
+				\item Superficie 
+				\item Número de trabajadores
+				\item Maquinaria
+				\item Capacidad de operación 
+				\item Descripción de la forma de operación
+		\end{itemize}
+		\item El Usuario necesita consultar sólo el 3er tipo de informe(Infraestructura).
+	\end{itemize}
+	
+	\item \textbf{1er Capturista de la DPASR }
+	\begin{itemize}
+		\item El usuario necesita registrar y eliminar la información siguiente con respecto a las 16  delegaciones del Distrito Federal.
+		\begin{itemize}
+			\item Toneladas de Generación de residuos por día
+			\item Sitios de disposición final.
+			\item Rutas y sitios de recolección.
+			\item Vehículos recolectores.
+			\item Estaciones de Transferencia.
+			\item Plantas de Selección.
+			\item Plantas de Composta
+		\end{itemize}
+		\item El Usuario necesita consultar sólo el 1er tipo de informe(Delegaciones).
+	\end{itemize}
+	
+	\item \textbf{2do Capturista de la DPASR}
+	\begin{itemize}
+		\item El usuario necesita registrar y eliminar la información siguiente con respecto a los 3 diferentes tipos de planes de manejo.
+		\begin{itemize}
+			\item Cantidad de los residuos que se generan  por establecimiento y cuál es su fuente de generación
+			\item Características del residuo
+			\item Justificación del plan de manejo        
+			\item Participantes
+			\item Procedimiento de recepción  de los residuos
+			\item Almacenamiento
+			\item Procedimiento de recepción    
+			\item Procedimiento de  recolección
+			\item Destino final
+			\item Metas del plan de manejo
+		\end{itemize}
+		\item El Usuario necesita consultar sólo el 2do tipo de informe(Planes de Manejo).
+	\end{itemize}
+	\item \textbf{3er Capturista de la DPASR}
+	\begin{itemize}
+		\item El usuario necesita registrar y eliminar la información siguiente con respecto a la infraestructura conformada por 12 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final.
+		\begin{itemize}
+			\item Nombre de la Planta
+			\item Ubicación
+			\item Superficie 
+			\item Número de trabajadores
+			\item Maquinaria
+			\item Capacidad de operación 
+			\item Descripción de la forma de operación
+		\end{itemize}
+		\item El Usuario necesita consultar sólo el 3er tipo de informe(Infraestructura).
+	\end{itemize}
+	\item \textbf{Subdirector de Sistemas}
+	\begin{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a las 16  delegaciones del Distrito Federal.
+		\begin{itemize}
+			\item Número de Toneladas de Generación de residuos por día.
+			\item Sitios de disposición final.
+			\item Rutas y sitios de recolección.
+			\item Vehículos recolectores.
+			\item Estaciones de Transferencia.
+			\item Plantas de Selección.
+			\item Plantas de Composta.
+		\end{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a los 3 diferentes tipos de planes de manejo.
+		\begin{itemize}
+			\item Cantidad de los residuos que se generan  por establecimiento y cuál es su fuente de generación
+			\item Características del residuo
+			\item Justificación del plan de manejo        
+			\item Participantes
+			\item Procedimiento de recepción  de los residuos
+			\item Almacenamiento
+			\item Procedimiento de recepción    
+			\item Procedimiento de  recolección
+			\item Destino final
+			\item Metas del plan de manejo
+		\end{itemize}
+		\item El usuario necesita conocer, modificar, registrar y eliminar la información siguiente con respecto a la infraestructura conformada por 12 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final.
+		\begin{itemize}
+			\item Nombre de la Planta
+			\item Ubicación
+			\item Superficie 
+			\item Número de trabajadores
+			\item Maquinaria
+			\item Capacidad de operación 
+			\item Descripción de la forma de operación
+		\end{itemize}
+		\item El Usuario necesita consultar los siguientes 3 diferentes tipos de informes.
+		\begin{itemize}
+			\item Delegaciones
+			\item Planes de Manejo
+			\item Infraestructura
+		\end{itemize}
+		\item El usuario necesita modificar la base de datos y la programación del sistema.
+		\item El usuario necesita crear nuevos usuarios, eliminar y modificar los ya existentes.
+	\end{itemize}
+	\item \textbf{Otras Direcciones de la SMA y población en general}
+	\begin{itemize}
+		\item El Usuario necesita consultar los siguientes 3 diferentes tipos de informes.
+		\begin{itemize}
+			\item Delegaciones
+			\item Planes de Manejo
+			\item Infraestructura
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+%--------------------------------------------------------------------
+\section{Requerimientos del negocio}
+\begin{itemize}
+		\item El sistema debe permitir que la secretaría registre de manera diaria  la cantidad recolectada de residuos por cada viaje, especificando toneladas, tipo de residuo(orgánico,inorgánico o mixto), vehículo, ruta y chofer.
+		\item El sistema debe permitir la opción de registrar delegaciones , Colonias, Puntos de recolección, planes de manejo, rutas de recolección, vehículos, Establecimientos Empresas, estaciones de transferencia, plantas de selección y de composta, sitios de disposición final, prestadores de servicios, unidades habitacionales.
+		\item El sistema debe contemplar que los vehículos de recolección transportan la basura a estaciones de transferencias, y posteriormente los residuos se trasladan a vehículos transfer a sitios de disposición final.
+		\item El sistema necesita generar los 3 tipos de informes, debido a que permitirá determinar a la secretaría la cantidad de impuestos a pagar por parte de las empresas y mercados identificadas como “grandes generadores de recursos”, así como eliminar basureros clandestinos.
+		\item El sistema debe saber durante la recolección de basura, que camiones de basura se desviaron hacia plantas de selección o de composta para que los residuos sean llevados a plantas de selección o de  composta(reduciendo la cantidad de residuos que terminan en un sitio de disposición final). 
+	
+\end{itemize}
+\section{Requerimientos funcionales}
+	\begin{itemize}
+		\item \textbf{RF1}: El sistema deberá almacenar en una Base de Datos la información correspondiente a cada una de las 16 delegaciones que conforman el D.F. 
+		\item \textbf{RF2}: El sistema deberá mostrar en pantalla información acerca de la delegación correspondiente obteniendo los registros desde una base de datos.
+		\item \textbf{RF3}: El sistema deberá almacenar en una Base de Datos la información   correspondiente a cada uno de los 3 diferentes planes de manejo. 
+		\item \textbf{RF4}: El sistema deberá mostrar en pantalla información acerca del plan de manejo correspondiente a un establecimiento obteniendo los registros desde una base de datos
+		\item \textbf{RF5}: El sistema deberá almacenar en una Base de Datos la información correspondiente a la infraestructura . 
+		\item \textbf{RF6}: El sistema deberá mostrar en pantalla información acerca de la infraestructura(Ya sea estación de transferencia, planta de separación, planta de composta o sitio de disposición final) obteniendo los registros desde una base de datos.
+		\item \textbf{RF7}: El sistema deberá de generar informes personalizados acerca de las Delegaciones considerando diferentes periodos de tiempo.
+		\item \textbf{RF8}: El sistema deberá de generar informes personalizados  acerca de los Planes de manejo considerando diferentes periodos de tiempo.
+		\item \textbf{RF9}: El sistema deberá de generar informes personalizados acerca de la Infraestructura considerando diferentes periodos de tiempo.
+		\item \textbf{RF10}: El sistema deberá permitir dar de alta nuevos registros correspondientes a cada una de las 16 Delegaciones que conforman el D.F.
+		\item \textbf{RF11}: El sistema deberá permitir modificar registros correspondientes a cada una de las 16 Delegaciones que conforman el D.F.
+		\item \textbf{RF12}: El sistema deberá permitir eliminar registros correspondientes a cada una de las 16 Delegaciones que conforman el D.F.
+		\item \textbf{RF13}: El sistema deberá permitir dar de alta nuevos registros correspondientes a cada uno de los 3 diferentes planes de manejo.
+		\item \textbf{RF14}: El sistema deberá permitir modificar registros correspondientes a cada uno de los 3 diferentes planes de manejo.
+		\item \textbf{RF15}: El sistema deberá permitir eliminar registros correspondientes a cada uno de los 3 diferentes planes de manejo.
+		\item \textbf{RF16}: El sistema deberá permitir dar de alta nuevos registros correspondientes a la infraestructura(2 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final).
+		\item \textbf{RF17}: El sistema deberá permitir modificar registros correspondientes a la infraestructura (2 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final).
+		\item \textbf{RF18}: El sistema deberá permitir eliminar registros correspondientes a la infraestructura(2 estaciones de transferencia, 3 plantas de separación, 1 planta de composta y un sitio de disposición final).
+		\item \textbf{RF19}: El sistema debe almacenar información de los distintos tipos de usuarios en una Base de Datos.
+		\item \textbf{RF20}: El sistema deberá permitir dar de alta nuevos usuarios especificando el perfil y los permisos.
+		\item \textbf{RF21}: El sistema deberá permitir eliminar usuarios si es que así se requiere.
+		\item \textbf{RF22}: El sistema deberá permitir modificar usuarios ya existentes.
+		\item \textbf{RF23}: El sistema deberá tener control de accesos mediante nombre de usuario y contraseña.
+	\end{itemize}
+\section{Requerimientos de plataforma}
+
+\subsection{Requerimientos de Hardware}
+
+\begin{itemize}
+	\item Cliente
+	\begin{itemize}
+		Computadora o tablet con las siguientes especificaciones mínimas: 
+		\item Memoria RAM de 1GB.
+		\item 500 MB de espacio libre en disco duro.
+		\item Procesador Intel Pentium 4,equivalente o superior.
+	\end{itemize}
+	\item Servidor
+	\begin{itemize}
+		\item Procesador Intel multi-core, Procesador dual 2.4GHz, caché de 512 Ko equivalente
+		\item 8 GB de memoria RAM
+		\item Al menos 1560 GB de almacenamiento
+		\item SAN externo para copias de seguridad
+		\item Una unidad SCSI conectada al nivel 5 de RAID
+	\end{itemize}
+\end{itemize}
+\subsection{Requerimientos de Software}
+\begin{itemize}
+	\item Cliente
+	\begin{itemize}
+		\item Navegador Web con las últimas actualizaciones.
+	\end{itemize}
+	\item Servidor
+	\begin{itemize}
+		\item MySQL Server (última versión estable)
+		\item Apache TomCat 7.0 o (última versión estable)
+		\item Java EE(última versión estable)
+		\item SIstema Operativo Red Hat Enterprise Linux
+		
+	\end{itemize}
+\end{itemize}
+\subsection{Red y otros servicios}
+	\begin{itemize}
+		\item Acceso a internet con velocidad mínima de 3 Mbps de banda ancha.
+		\item Servicio de luz eléctrica
+	\end{itemize}
+\subsection{Interacción con otros sistemas}
+	EL SIRSDF debe de poder Coordinar la actualización, ejecución y evaluación del Programa de Gestión Integral de los Residuos Sólidos y mediante la sincronización de los datos y acceso a los demás sistemas como el SEPOMEX entre otros que llevan a cabo el manejo de la información relevante para el sistema, se generen los reportes sin necesidad de insertar nuevamente toda la información de manera manual al sistema SIRSDF.
+	
+
+\section{Requerimientos de interacción con el usuario}
+	\begin{itemize}
+	\item El sistema web debe de contar con una  interfaz que facilitará su uso a los  usuarios de poca experiencia mediante las siguientes características:
+	\item Facilidad de comprensión, aprendizaje y uso.
+	\item Los objeto de interés han de ser de fácil identificación
+	\item Diseño ergonómico mediante el establecimiento de menús, barras de acciones e iconos de fácil acceso.
+	\item Las interacciones se basarán en acciones físicas sobre elementos de código visual o auditivo (iconos, botones, imágenes, mensajes de texto o sonoros, barras de desplazamiento y navegación...) y en selecciones de tipo menú con sintaxis y órdenes
+	\item Las operaciones serán rápidas, incrementales y reversibles, con efectos inmediatos.
+	\item Existencia de herramientas de Ayuda y Consulta.
+	
+	\end{itemize}
+\section{Datos e información que debe manejar el sistema}
+	\begin{itemize}
+		\item Nombre de la Estación de transferencia, planta de separación y planta de 	composta.
+		\item Tipo de residuos.
+		\item Rutas destinada.
+		\item Tipo de formato de plan de trabajo.
+		\item Nombre de la delegación y Colonias . 
+		\item Toneladas de residuos.
+		\item Modelo de Vehículo  del transporte.
+		\item Número de matrícula de vehículo.
+	\item 	Kilometraje del dia.
+	\item 	Combustible utilizado por dia.
+		\item Datos del personal
+		
+	\end{itemize}
+
+\section{Propiedades no funcionales del sistema}
+
+% Liste las propiedades del proyecto completo sin importar que sea posible terminar durante el curso
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\subsection{Desempeño}
+El portal web debe ser capaz de soportar el acceso de múltiples usuarios(150 aproximadamente) de manera simultánea sin verse afectado el rendimiento de este,haciendo creer al usuario que es el único que está teniendo uso de  él.
+
+\subsection{Fiabilidad}
+El sistema tendrá una base de datos y una gestión de la información en la cual se evitará tener datos innecesarios. Esto permitirá generar reportes confiables ya que solo los usuarios capacitados  y con acceso designado podrán agregar y modificar la información. Viéndose reflejado cualquier tipo de cambio en el sistema así como en sus relaciones, permitiendo coherencia a los datos del sistema.
+
+\subsection{Disponibilidad}
+El sistema web podrá ser accedido desde cualquier computadora que cumpla con los requerimientos de plataforma; las 24 hrs del día,los 365 días del año, gracias al servidor contratado.
+
+
+
+\subsection{Seguridad}
+El sistema web tendrá una gestión de acceso por usuario y contraseña con la cual se identifica que tipo de usuario es el que accede y se identificaran los privilegios que tiene este ya sean solo de visualización o en su caso de modificación de la información.
+
+
+\subsection{Mantenibilidad}
+El sistema será capaz de adaptarse a los cambios que vayan surgiendo a lo largo del ciclo de vida sin alterar su funcionamiento anterior y sin producir nuevos errores, añadiendo así nuevas funcionalidades que cubren nuevas necesidades.
+
+
+\subsection{Portabilidad}
+Debido a que el sistema es web, éste no necesita ser instalado por lo tanto no requiere de mayor esfuerzo al cambiar la plataforma desde donde se accede
+\section{Alcance para el curso}
+
+Para los siguientes 3 meses el equipo se compromete a llevar a cabo los 22 requerimientos listados anteriormente, sin embargo la integración con otros sistemas descritos en la problemática no será posible realizarla. 
+
+Como producto final se esperá un sistema web que lleve a cabo los procesos previamente descritos y que contenga todos los requerimientos funcionales anteriormente especificados.
+
+

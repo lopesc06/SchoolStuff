@@ -1,0 +1,68 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU5}{Consulta  de los vehículos de recolección}{
+	El actor podrá entrar al sistema cuando requiera consultar la información de   vehículos de recolección actualmente registrados en el sistema 
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Arturo Escutia López}
+	\UCitem{Modificado}{09 - Nov - 2015}
+	\UCitem{Revisor}{Miguel Angel Medina Zarazua}
+	\UCitem{Revisado}{09 - Nov - 2015}
+	\UCitem{Status}{Aprobado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Alta}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Baja}
+	\UCitem{Prioridad}{Media}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Directora General de Regulación y Vigilancia Ambiental
+Subdirector,JUDs de la DPASR,Director de Proyectos de Agua, Suelo y Residuos,1er Asesor técnico de la DPASR,Subdirector de Sistemas}
+	\UCitem{Propósito}{Permitir al actor conocer los datos  del vehiculo recolector como una fuente de información confiable  }
+	\UCitem{Entradas}{Matricula y/o modelo del vehículo}
+	\UCitem{Salidas}{Matricula,Kilometraje,modelo del vehiculo,Capacidad,Peso y Tipo de vehículo recolector}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla }
+	\UCitem{Precondiciones}{ Debe existir previamente un registro previo de dicho vehiculo el cual se desea consultar su información en la base de datos}
+	\UCitem{Postcondiciones}{Se mostraran los datos de los vehiculos que se desean consultar }
+	\UCitem{Errores}{Que no  exista el vehículo recolector consultado o los datos de entrada esten mal escrito }
+	\UCitem{Fuentes}{MANUAL SIRS vf}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+
+	\UCpaso[\UCactor] Teclea la Matricula y/o modelo del vehículo   que desea consultar en la \IUref{UI}{Pantalla de consulta de vehiculos recolectores}   \Trayref{A}
+	
+	\UCpaso Verifica que existan el vehículo recolector \Trayref{B}.
+	
+	
+	\UCpaso Despliega la información en la \IUref{UI}{Pantalla de consulta de vehiculos recolectores} 
+	
+	
+	
+\end{UCtrayectoria}
+	
+
+
+	\begin{UCtrayectoriaA}{A}{Campos vacíos}
+	\UCpaso [\UCactor] no ingresa datos en los campos de  Matricula y modelo del vehículo  .
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Consultar}.
+	\UCpaso Muestra el Mensaje {\bf MSG10-}``Todos  los Campos estan  Vacíos ingrese al menos uno para consultar un vehiculo''.
+	\UCpaso Continua en el paso 1 del \UCref{CU5}.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{No existe el vehiculo recolector }
+	\UCpaso [\UCactor] Ingresa la Matricula y/o modelo del vehículo  .
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Consultar}.
+	\UCpaso Muestra el Mensaje {\bf MSG11-}``No hay existe ningun vechiculo asociado a los datos ingresados''.
+
+	\UCpaso Continua en el paso 1 del \UCref{CU5}.
+\end{UCtrayectoriaA}
+
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

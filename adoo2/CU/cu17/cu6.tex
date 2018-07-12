@@ -1,0 +1,50 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU6}{Buscar Chofer}{
+	Un actor que desea consultar información correspndiente a un chofer accede al sistema e indica algún dato del chofer que conozca, asi es sistema realiza una busqueda para mostrar los datos le chofer, finalmente le dará la opción de imprimir. 
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Juan Daniel López Santiago.}
+	\UCitem{Modificado}{08 - Nov - 2015}
+	\UCitem{Revisor}{Arturo Escutia López}
+	\UCitem{Revisado}{09 - Nov - 2015}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Alta}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Media}
+	\UCitem{Prioridad}{Media}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Directora General de Regulación y Vigilancia Ambiental, Subdirector y Jefe de Unidad Departamental de la DPASR, Director de la DPASR, 1er Asesor Técnico de la DPASR y Subdirector de Sistemas}
+	\UCitem{Propósito}{Ser una fuente de consulta confiable para obtener datos con respecto a los distintos choferes y la manera en como operan los diferentes vehículos recolectores.}
+	\UCitem{Entradas}{Nombre(s), Apellido Paterno, Apellido Materno, CURP o No. de Empleado del Chofer}
+	\UCitem{Salidas}{Nombre(s),Apellido Paterno, Apellido Materno, CURP, No. de Empleado, Licencia de Manejo, Dirección, Teléfono(s), Correo Electrónico, Vehículo Actual e Historial de Vehículos.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla e Impresora.}
+	\UCitem{Precondiciones}{Los datos del Chofer deben estar registrados anteriormente.}
+	\UCitem{Postcondiciones}{Se mostrarán los datos correspondientes al Chofer}
+	\UCitem{Errores}{Que no haya resgistros existentes del chofer  o que el dato de entrada esté mal escrito.}
+	\UCitem{Fuentes}{Manual de Usuario SIRS.}
+	\UCitem{Observaciones}{Falta trayectoria secundaria de cuando no se introduce ningun dato de entrada}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce alguno de los distintos datos de entrada en el sistema.
+	\UCpaso Verifica que existan coincidencias con alguno de los registros del chofer.\Trayref{A}.
+	\UCpaso Despliega la \IUref{UI5}{Pantalla de Consulta Chofer} con los datos correspondientes al Chofer.
+	\UCpaso Pregunta al usuario si desea imprimir los datos del Chofer.
+	\UCpaso[\UCactor] Indica que desea imprimir los datos.
+	\UCpaso Imprime los datos del Chofer \IUref{UI19}{Reporte Individual Chofer}.		
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{No existen coincidencias con el dato de entrada.}
+	\UCpaso Muestra el Mensaje {\bf MSG4-}''No se encontraron Coincidencias.''.
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Aceptar}.
+	\UCpaso[] Termina el caso de uso.
+\end{UCtrayectoriaA}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

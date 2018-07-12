@@ -1,0 +1,75 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU4}{Dar de Alta Ruta}{
+	Cuando se requiere registrar una ruta nueva se especifican los datos de entrada mediante una pantalla de formularios para que asi posteriormente se alamacenen en una BD.
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Arturo Escutia López}
+	\UCitem{Modificado}{20 - Mayo - 2016}
+		\UCitem{Revisor}{Miguel Angel Medina Zarazúa}
+\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Status}{Revisado}         
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Media}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Alta}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+		\UCitem{Actor}{Director de Proyectos de Agua, Suelo y Residuos, Asesor técnico, Capturista ,Subdirector de Sistemas}
+	\UCitem{Propósito}{Mantener control sobre las rutas de recolección de sólidos.}
+	\UCitem{Entradas}{Delegación, Hora de recolección, Estado, Colonia ,Punto específico y Plan de manejo.}
+	\UCitem{Salidas}{Pantalla de notificación la cual puede ser registro exitoso o registro denegado.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla Y base de datos.}
+	\UCitem{Precondiciones}{No debe de existir ruta exactamente igual.}
+	\UCitem{Postcondiciones}{Existirá nueva ruta en la base de datos.}
+	\UCitem{Errores}{Que exista una ruta exactamente igual.}
+\UCitem{Fuentes}{Pagina de SMA}
+	\UCitem{Observaciones}{El plan de manejo y el Estado no pertenecen a las rutas, sólo el primero pertence a un sitio específico, en cuanto al Estado no es necesario ya que sólo manejamos delegaciones, también la hora de recolección sale sobrando, faltan los vehículos que pasan por esa ruta. La salida debería de mostrar los datos de la ruta que se acaban de dar de alta para corroborar con el usuario. En errores falta considerar que los datos que se ingresaron son incorrectos. En cuanto a las trayectorias observo confusión en cuanto a los estados.}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso El capturista presiona el botón alta de rutas.
+	\UCpaso	El sistema abrirá la interfaz de alta de rutas.
+	\UCpaso	El sistema  mostrara un conjunto de cajas de texto para seleccionar opciones.
+
+	\UCpaso	El  capturista elegirá el punto específico al cual se hará la recolección o se hará la disposición. 
+
+	\UCpaso	El capturista podrá asignarlo a la ruta.
+	\UCpaso	El capturista podrá seleccionar el botón “agregar” para agregar otro punto al que se debe acudir.
+	\UCpaso	El capturista seleccionará  el botón “finalizar” cuando termine.
+	\UCpaso	El sistema validara la operación. 
+	\UCpaso El capturista asignara un “ID” a la nueva ruta.
+	\UCpaso	El sistema mostrara un mensaje de “Se registró ruta exitosamente”.
+	\UCpaso	FIN
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{Ruta idéntica en la base de datos.}
+	\UCpaso El sistema validara la operación.
+	\UCpaso	El sistema encuentra ruta exactamente igual.
+	\UCpaso	El sistema muestra mensaje “ruta ya existente”.
+	\UCpaso	El Capturista presionara aceptar para cerrar mensaje.
+	\UCpaso	El capturista podrá modificar la información desde el punto 4 de la trayectoria principal.
+	\UCpaso	Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{Datos incompletos.}
+	\UCpaso El sistema validara la operación.
+	\UCpaso	El sistema encuentra que faltan campos por llenar.
+	\UCpaso	El sistema muestra mensaje “Falta información requerida”.
+	\UCpaso	El capturista presionara aceptar para cerrar el mensaje.
+	\UCpaso	El capturista podrá agregar información del punto 4 de la trayectoria principal.
+	\UCpaso	Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{Agregar otro punto.}
+	\UCpaso El capturista Desde el punto 11 de la trayectoria principal presionara la opción agregar.
+	\UCpaso	El sistema habilitara nuevas ventanas para agregar.
+	\UCpaso	El capturista podrá agregar nueva información como desde el punto 4 de la trayectoria principal.
+	\UCpaso	Fin.
+\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

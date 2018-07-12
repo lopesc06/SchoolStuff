@@ -1,0 +1,69 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU1}{Alta de un vehículo de recolección}{
+	El actor podrá entrar al sistema cuando una nueva unidad  que sea capaz de llevar a cabo la recolección de residuos solidos  necesite darse de alta ,de esta forma se le mostrarán los datos necesarios para registrar el vehículo,registrara el vehículo y le imprimirá en pantalla los datos que se registraron
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.3}
+	\UCitem{Autor}{Arturo Escutia López}
+	\UCitem{Modificado}{27 - Nov - 2015}
+	\UCitem{Revisor}{Miguel Angel Medina Zarazúa}
+	\UCitem{Revisado}{30 - Nov - 2015}
+	\UCitem{Status}{Aprobado}
+	\UCitem{Aprobado}{30 - Nov - 2015}
+	\UCitem{Madurez}{Media}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Baja}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Director de Proyectos de Agua, Suelo y Residuos,1er Asesor técnico de la DPASR,1er Capturista de la DPASR,Subdirector de Sistemas}
+	\UCitem{Propósito}{Permitir agregar un nuevo vehículo al sistema  para  asignarle  sus  rutas correspondientes  y pueda llevar a cabo la recolección de residuos.  }
+	\UCitem{Entradas}{Matricula,Marca,Modelo,Año del modelo,tipo de vehiculo recolector y Delegación }
+	\UCitem{Salidas}{Matricula,Marca,Modelo,Año del modelo,tipo de vehiculo recolector y Delegación a la que pertenece}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla}
+	\UCitem{Precondiciones}{No debe existir previamente un registro previo de dicho vehiculo el cual se desea dar de alta en la base de datos}
+	\UCitem{Postcondiciones}{El vehículo quedara registrado en la base de datos si no existe un registro anterior asociado a dicho vehículo.}
+	\UCitem{Errores}{El vehículo es registrado parcialmente de toda la información ingresada o registra un vehiculo ya existente }
+	\UCitem{Fuentes}{MANUAL SIRS vf}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Usuario  y Contraseña en el sistema vía teclado en la  \IUref{UI}{Pantalla  login de usuarios}.(Incluye CU Login Usuario)
+	\UCpaso[\UCactor] Solicita dar de alta un Nuevo vehiculo seleccionando la opcion Nuevo Vehiculo  del menu Vehículos recolectores 
+	
+	\UCpaso Muestra la \IUref{UI}{Registro Nuevo Vehículo recolector} con los campos  a llenar para registrar un vehículo.
+	
+	\UCpaso[\UCactor] Teclea y selecciona los datos de entrada de la información del vehículo que desea registrar \BRref{Campos vacíos} \Trayref{A}\label{CU17SeleccionarSeminario}.
+	
+	\UCpaso Verifica que  los datos cumplan con el formato establecido.
+	
+	
+	\UCpaso Verifica que el vehículo que se esta registrando no existe actualmente en el sistema \BRref{Verificar vehículo en el sistema} \Trayref{C}.
+	
+	\UCpaso Registra los datos del vehiculo recolector.
+	
+	\UCpaso Despliega el los datos registrados del vehiculo.
+	
+	
+\end{UCtrayectoria}
+	
+
+
+	\begin{UCtrayectoriaA}{A}{Campos vacíos}
+	\UCpaso [\UCactor] No ingresa  todos los campos del registro que son obligatorios.
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Agregar Nuevo Vehículo Recolector}.
+	\UCpaso Muestra el Mensaje {\bf MSG3-}``Complete el campo''.
+	\UCpaso Continua en el paso 3 del \UCref{CU17}.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{Verificar vehiculo en el sistema}
+	\UCpaso Muestra el Mensaje {\bf MSG5-}``El vehículo que intenta registrar ya ha sido dado de alta en el sistema''.
+	\UCpaso Continúa en el paso 3 del \UCref{CU17}.
+\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

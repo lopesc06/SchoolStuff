@@ -1,0 +1,51 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU2}{Consultar Plantas de Composta}{
+	Cuando un Actor requiera conocer la información correspondiente a una planta de composta puede acceder al sistema y hacer la busqueda de una planta de composta indicando el nombre de la planta, el sistema mostrará los datos correspondientes.
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+\UCitem{Autor}{Arturo Escutia López}
+\UCitem{Modificado}{20 - Mayo - 2016}
+		\UCitem{Revisor}{Miguel Angel Medina Zarazúa}
+\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Alta}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Media}
+	\UCitem{Prioridad}{Media}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Director de Proyectos de Agua, Suelo y Residuos, Asesor técnico, Capturista ,Subdirector de Sistemas}
+	\UCitem{Propósito}{Servir a los diferentes Actores que requieran conocer datos acerca de las plantas de composta, como una fuente de información confiable.}
+	\UCitem{Entradas}{Nombre de la Planta de Composta}
+	\UCitem{Salidas}{Nombre, Ubicación, Superficie, Capacidad Instalada(Toneladas por Año), Número de Trabajadores, Lista de Maquinaria, Observaciones, Origen de los Residuos, Total de Toneladas por Año, producción de Composta(Toneladas por Año), Destino de la Composta, Cantidad de Composta Entregada(Toneladas por Año)}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla.}
+	\UCitem{Precondiciones}{Los datos correspondientes a la planta de composta debe estar almacenados en la Base de Datos.}
+	\UCitem{Postcondiciones}{Se mostrará información correspondiente a la planta de composta.}
+	\UCitem{Errores}{Que no exista la planta de composta consultada o que el dato de entrada esté mal escrito.}
+\UCitem{Fuentes}{Pagina de SMA}
+	\UCitem{Observaciones}{¿Cómo indica el usuario que desea imprimir el reporte?
+	¿Dónde introduce el Nombre de la planta de Composta en el sistema?}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce el Nombre de la planta de Composta en el sistema.
+	\UCpaso Verifica que exista la planta de composta indicada.\Trayref{A}.
+	\UCpaso Despliega la \IUref{UI15}{Pantalla de Consulta Planta de Composta} con los datos de la planta de composta correspondiente.
+	\UCpaso Pregunta al usuario si desea imprimir el reporte de la planta de composta seleccionada.
+	\UCpaso[\UCactor] Indica que desea imprimir el reporte correspondiente.
+	\UCpaso Imprime el reporte de la planta de composta correspondiente \IUref{UI189}{Reporte Planta de Composta}.		
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{No existe la planta de Composta}
+	\UCpaso Muestra el Mensaje {\bf MSG10-}``La planta de composta  [{\em Nombre Planta de Composta}] aun no se encuentra resgistrada.''.
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Aceptar}.
+	\UCpaso[] Termina el caso de uso.
+\end{UCtrayectoriaA}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

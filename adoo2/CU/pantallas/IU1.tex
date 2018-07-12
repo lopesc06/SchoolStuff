@@ -1,0 +1,39 @@
+\subsection{IU1 Pantalla de dar de Alta un vehículo de recoleccion}
+
+\begin{objetivos}[Control de cambios]
+	\item {\bf Autor:} Arturo Escutia López
+	\item {\bf Versión:} 2.0
+	\item {\bf Modificado:} 7-feb-2015
+	\item {\bf Revisor:} Miguel Ángel Médina Zarazúa
+	\item {\bf Revisado:}7-feb-2015
+	\item {\bf Status:} Aprobado
+	\item {\bf Aprobado:} 7-feb-2015
+\end{objetivos}
+
+\subsubsection{Objetivo}
+Permitir agregar un nuevo vehículo al sistema para asignarle sus rutas correspondientes y pueda llevar a cabo la recolección de residuos.
+
+\subsubsection{Diseño}
+	Esta pantalla aparece una vez que se haya iniciado el sistema previamente.
+	Para llenar los datos de esta pantalla, se debe colocar la matricula del vehiculo recolector, marca, tipo de vehiculo, delegación al que pertecenera, el modelo y el año del vehiculo.
+	
+
+\IUfig[.5]{gui/IU1}{IU1}{Pantalla de Alta un vehículo de recoleccion.}
+
+\subsubsection{Salidas}
+Matricula,Marca,Modelo,Añoo del modelo,tipo de vehiculo recolector y Delegación a la que pertenece.
+
+\subsubsection{Entradas}
+Matricula,Marca,Modelo,Añoo del modelo,tipo de vehiculo recolector y Delegación.
+
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Registrar}:Verifica que se encuentren rellenados los campos con un formato correcto, así como que no exista vehiculo con los mismos datos.
+\end{itemize}
+
+\subsubsection{Mensajes}
+	\begin{Citemize}
+		\item {\bf MSG5} El vehículo que intenta registrar ya ha sido dado de alta en el sistema.
+		\item {\bf MSG4} Este tipo de vehiculo recolector no existe registrar previamente ese tipo de vehiculo.
+		\item {\bf MSG3} Complete el campo.
+	\end{Citemize}

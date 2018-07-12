@@ -1,0 +1,38 @@
+\subsection{IU3 Pantalla de dar de Alta un Chofer}
+
+\begin{objetivos}[Control de cambios]
+	\item {\bf Autor:}Daniel López Santiago 
+	\item {\bf Versión:} 2.0
+	\item {\bf Modificado:} 7-feb-2015
+	\item {\bf Revisor:} Miguel Ángel Medina Zarazúa 
+	\item {\bf Revisado:}7-feb-2015
+	\item {\bf Status:} Aprobado
+	\item {\bf Aprobado:} 7-feb-2015
+\end{objetivos}
+
+\subsubsection{Objetivo}
+	Dar de alta a un chofer con fin de tener un mayor control en lo referente al personal autorizado para hacer uso del manejo de vehiculos recolectores, así como datos personales.
+
+\subsubsection{Diseño}
+	Esta pantalla apareceuna vez que se haya iniciado el sistema previamente.
+	Para llenar los datos de esta pantalla, se debe colocar el nombre o los nombres del chofer, apellido paterno, apellido materno,
+	curp, licencia de manejo, telefono de casa, siendo hasta el momentos, todos estos datos obligatorios para permitir dar de alta a un chofer, los datos opcionales son el numero de celular y correo electrónico. 
+
+\IUfig[.5]{gui/RegistrarChofer}{IU3}{Pantalla de dar de Alta un Chofer.}
+
+\subsubsection{Salidas}
+
+Se muestran los datos con lo que el conductor fue registrado as como un mensaje de registro exitoso.
+
+\subsubsection{Entradas}
+Nombre, Apellido Paterno, Apellido Materno, CURP, Licencia de Manejo, Telefono de Casa, Número de celular, Correco Electrónico.
+
+\subsubsection{Comandos}
+\begin{itemize}
+	\item \IUbutton{Agregar Conductor}:Verifica que se encuentren rellenados los campos con un formato correcto, así como que no exista otro chofer con los mismo datos. 
+\end{itemize}
+
+\subsubsection{Mensajes}
+	\begin{Citemize}
+		\item {\bf MSG1} Error al verificar los datos de acceso, vuelva a intentarlo.
+	\end{Citemize}

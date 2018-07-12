@@ -1,0 +1,36 @@
+\subsection{IU10 Consulta de todos los chofer}
+
+\begin{objetivos}[Control de cambios]
+	\item {\bf Autor:} 
+	\item {\bf Versión:} 1.0
+	\item {\bf Modificado:} 
+	\item {\bf Revisor:} 
+	\item {\bf Revisado:}
+	\item {\bf Status:} Aprobado
+	\item {\bf Aprobado:} 
+\end{objetivos}
+
+\subsubsection{Objetivo}
+
+	Permitir al actor conocer los datos del vehiculo recolector como una fuente de información confiable
+
+\subsubsection{Diseño}
+	Esta pantalla apareceuna vez que se haya iniciado el sistema previamente.
+	Se muestran 4 columnas, donde se especifica que tipo de campo esta mostrando, en este caso id, tipo de vehiculo, Capacidad en toneladas, y Peso del camion, respectivamente.
+	
+
+\IUfig[.5]{gui/Iu9}{IU9}{Pantalla de Consulta de todos los chofer.}
+
+\subsubsection{Salidas}
+
+Matrícula,Modelo,Año,Marca,Delegación,Tipo vehículo,Capacidad.
+
+\subsubsection{Entradas}
+Seleccion de la opción mostrar todos los vehículos en el menu vehiculo recolector
+
+
+
+\subsubsection{Mensajes}
+	\begin{Citemize}
+		\item {\bf MSG9} No es posible obtener los registros de vehiculos recolectores.
+	\end{Citemize}

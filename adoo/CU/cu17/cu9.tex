@@ -1,0 +1,57 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU9}{Consulta  de todos los vehículos de recolección}{
+	El actor podrá entrar al sistema cuando requiera consultar la información de todos  vehículos de recolección actualmente registrados en el sistema 
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.2}
+	\UCitem{Autor}{Miguel Angel Medina Zarazúa}
+	\UCitem{Modificado}{27 - Nov - 2015}
+	\UCitem{Revisor}{Ivan Baltazar Camacho}
+	\UCitem{Revisado}{30 - Nov - 2015}
+	\UCitem{Status}{Aprobado}
+	\UCitem{Aprobado}{30 - Nov - 2015}
+	\UCitem{Madurez}{Alta}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Baja}
+	\UCitem{Prioridad}{Media}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Directora General de Regulación y Vigilancia Ambiental
+Subdirector,JUDs de la DPASR,Director de Proyectos de Agua, Suelo y Residuos,1er Asesor técnico de la DPASR,Subdirector de Sistemas}
+	\UCitem{Propósito}{Permitir al actor conocer los datos  del vehiculo recolector como una fuente de información confiable  }
+	\UCitem{Entradas}{Seleccion de la opción mostrar todos los vehículos en el menu vehiculo recolector}
+	\UCitem{Salidas}{Matrícula,Modelo,Año,Marca,Delegación,Tipo vehiculo,Capacidad }
+	\UCitem{Origenes}{Teclado y/o mouse.}
+	\UCitem{Destinos}{Pantalla }
+	\UCitem{Precondiciones}{ Debe existir previamente un registro previo de  vehiculos el cual se desea consultar su información en la base de datos}
+	\UCitem{Postcondiciones}{Se mostraran los datos de los vehiculos que se desean consultar }
+	\UCitem{Errores}{No se muestre ningún vehiculo recolector en pantalla habiendo registros de vehiculos recolectores asociados }
+	\UCitem{Fuentes}{MANUAL SIRS vf}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Usuario  y Contraseña en el sistema vía teclado en la  \IUref{UI}{Pantalla  login de usuarios}.(Incluye CU Login Usuario)
+	\UCpaso[\UCactor]Selecciona la opcion Lista de vehiculos del menu Vehiculos recolectores
+	\UCpaso Obtiene  todos aquellos vehículos recolectores registrados  \Trayref{A}.
+	\UCpaso Lista y muestra en pantalla todos los vehiculos recolectores con sus  respectivos datos    \IUref{UI}{Pantalla de consulta Lista  vehiculos recolectores}  \Trayref{B}
+	
+\end{UCtrayectoria}
+	
+
+
+	\begin{UCtrayectoriaA}{A}{No es posible obtener los registros de vehiculos recolectores }
+		
+	\UCpaso[\UCactor]Selecciona la opcion Lista de vehiculos  del menu Vehiculos recolectores
+	\UCpaso Muestra solo los campos de los vehiculos recolectores  en la  \IUref{UI}{Pantalla de consulta de todos los vehiculos recolectores} 
+		\UCpaso Continua en el paso 1 del \UCref{CU9}. 
+
+\end{UCtrayectoriaA}
+
+
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

@@ -1,0 +1,100 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU3}{Dar de Alta Chofer}{
+	Cuando se requeire registrar un chofer destinado a un vehiculo recolector de residuos, el actor podra entrar al sistema para que este llene un formulario con los datos de , nombre, apellido(s) CURP,No.licencia, telefono y asignarle un no.de conductor, el sistema mostrara los datos correspondietes y lo registrara en el sistema.
+
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Miguel Ángel Medina Zarazua}
+	\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Autor}{Arturo Escutia López}
+\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Media}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Alta}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+		\UCitem{Actor}{Director de Proyectos de Agua, Suelo y Residuos, Asesor técnico, Capturista ,Subdirector de Sistemas}
+	\UCitem{Propósito}{Llevar un control sobre los conductores que tiene asignado un(Varios) vehiculo(s) de recolección de residuos.}
+	\UCitem{Entradas}{No. de Conductor, Nombre(s), Apellido Paterno o Materno,
+		CURP, o No. Licencia, telefono.}
+	\UCitem{Salidas}{Se muestran los datos con lo que el conductor fue registrado as
+		como un mensaje e registro exitoso.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla Y base de datos.}
+	\UCitem{Precondiciones}{El conductor no debe estar registrado en el sistema.}
+	\UCitem{Postcondiciones}{El conductor es registrado en el sistema.}
+	\UCitem{Errores}{Que el conductor ya exista en el sistema.}
+\UCitem{Fuentes}{Pagina de SMA}
+	\UCitem{Observaciones}{No solo se debería validar longitud sino tambien que no tenga numeros y caracteres especiales, Mostrar  que campos estan vacios, No se indica a donde sale , ya que puede ser al mismo formulario o a la página principal, Validar ambos apellidos y no sólo el materno}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Solicita dar de alta un Conductor presionando el botón Registrar
+	Conductor de la \IUref{UI5}{Gestionar Conductores}.
+	\UCpaso Solicita la información mostrando la \IUref{UI1}{Registrar conductor}.
+	\UCpaso[\UCactor] Proporciona los datos los datos siguientes: CURP, No. Licencia, Nombre, Apellido Paterno, Apellido Materno, teléfono, se
+	le asigna un No. de conductor .
+	\UCpaso Verifica que no existan campos requeridos vacios \Trayref{A}.
+	\UCpaso El sistema verifica que no exista registro de dicho conductor en el sistema. \Trayref{B}.
+	\UCpaso El sistema verifica que el CURP tenga formato correcto. \Trayref{C}.
+	\UCpaso El sistema verifica que el No. Licencia tenga formato correcto. \Trayref{D}.
+	\UCpaso El sistema verifica que Nombre, Apellido Paterno, Apellido Materno tengan longitud correcta. \Trayref{E}
+	\UCpaso El sistema verifica que el teléfono tenga formato correcto. \Trayref{F}.
+	\UCpaso El sistema agrega el registro del nuevo Conductor.
+	\UCpaso El sistema notifica que la operación se realizó con éxito.
+	\UCpaso Fin.
+	
+	
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{Campos requeridos vacíos.}
+	\UCpaso El sistema identifica que existen campos requeridos vacíos.
+	\UCpaso El sistema muestra el mensaje de "Campos vacíos requeridos".
+	\UCpaso El capturista presiona el botón salir
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{Conductor registrado anteriormente.}
+	\UCpaso El sistema identifica que el Conductor ya está registrado en el sistema.
+	\UCpaso El sistema muestra el mensaje "El conductor ya está registrado".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{Formato de CURP incorrecto.}
+	\UCpaso El sistema identifica que el CURP tiene formato incorrecto.
+	\UCpaso El sistema muestra el mensaje "CURP incorrecto".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{D}{Formato de No de Licencia incorrecto.}
+	\UCpaso El sistema identifica que el No. de Licencia tiene formato incorrecto.
+	\UCpaso El sistema muestra el mensaje "No. de Licencia incorrecto".
+	\UCpaso El capturista presiona el botón “aceptar”
+	\UCpaso. Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{E}{Formato de Nombre incorrecto.}
+	\UCpaso El sistema identifica que el nombre tiene longitud incorrecta.
+	\UCpaso El sistema muestra el mensaje "Longitud de Nombre incorrecta".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{F}{Formato de Apellido(s) incorrecto(s)}
+	\UCpaso El sistema identifica que el Apellido Materno y Apellido Paterno tiene longitud incorrecta y/o caracteres válidos.
+	\UCpaso El sistema muestra el mensaje "Formato de Apellido(s) incorrecto".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

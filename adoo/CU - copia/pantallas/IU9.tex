@@ -1,0 +1,37 @@
+\subsection{IU9 Consulta de los vehículos de recolección}
+
+
+\begin{objetivos}[Control de cambios]
+	\item {\bf Autor:} Arturo Escutia López
+	\item {\bf Versión:} 2.0
+	\item {\bf Modificado:} 7-feb-2015
+	\item {\bf Revisor:} Miguel Ángel Médina Zarazúa
+	\item {\bf Revisado:}7-feb-2015
+	\item {\bf Status:} Aprobado
+	\item {\bf Aprobado:} 7-feb-2015
+\end{objetivos}
+
+\subsubsection{Objetivo}
+
+	Permitir al actor conocer los datos del vehiculo recolector como una fuente de información confiable
+
+\subsubsection{Diseño}
+	Esta pantalla apareceuna vez que se haya iniciado el sistema previamente.
+	Se muestran 4 columnas, donde se especifica que tipo de campo esta mostrando, en este caso id, tipo de vehiculo, Capacidad en toneladas, y Peso del camion, respectivamente.
+	
+
+\IUfig[.5]{gui/Iu9}{IU9}{Pantalla de Consulta de los vehículos de recolección.}
+
+\subsubsection{Salidas}
+
+Matrícula,Modelo,Año,Marca,Delegación,Tipo vehículo,Capacidad.
+
+\subsubsection{Entradas}
+Seleccion de la opción mostrar todos los vehículos en el menu vehiculo recolector
+
+
+
+\subsubsection{Mensajes}
+	\begin{Citemize}
+		\item {\bf MSG9} No es posible obtener los registros de vehiculos recolectores.
+	\end{Citemize}

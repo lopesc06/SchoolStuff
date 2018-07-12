@@ -1,0 +1,71 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU7}{Consultar Rutas}{
+	Cuando se requiere conecer alguna de las diferentes rutas se debera acceder al sistema y validar los priviligios para poder ver esta informacion.
+	Se podra consultar alguna ruta apartir de su clave identificadora, ya que con esta se mostrará las direcciones de las rutas y los puntos a los cuales se debe ir.
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Ivan Baltazar Camacho}
+	\UCitem{Modificado}{09 - Nov - 2015}
+	\UCitem{Revisor}{Juan Daniel López Santiago}
+	\UCitem{Revisado}{09 - Nov - 2015}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Baja}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Alta}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Jefe de Unidad Departamental de la DPASR, Director de la DPASR,publico general 1er Asesor Tecnico de la DPASR y Subdirector de Sistemas
+}
+	\UCitem{Propósito}{Mantener control sobre las rutas de recolección de sólidos.}
+	\UCitem{Entradas}{numero de ruta,delegacion o Estado}
+	\UCitem{Salidas}{Delegación, Hora de recolección, Estado, Colonia ,Punto específico y Plan de manejo,Pantalla de notificación de ruta no encontrada o inexistente.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla y/o impresora}
+	\UCitem{Precondiciones}{Debe de existir una ruta}
+	\UCitem{Postcondiciones}{se podra visualizar los datos de una ruta y estos se podran imprimir en un pequeño informe}
+	\UCitem{Errores}{Que no exista la ruta que se busca.}
+	\UCitem{Fuentes}{Manual de Usuario SIRS e Inventario de Residuos Sólidos (IRS)}
+	\UCitem{Observaciones}{¿Por qué estado?, el plan de manejo corresponde a un sitio específico no a una ruta.}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso El usuario presiona el botón consultar rutas.
+	\UCpaso	El sistema abrirá la interfaz de consultar rutas.
+	\UCpaso	El sistema  mostrara un conjunto de cajas de texto para seleccionar opciones de busqueda.
+	\UCpaso	El usuario podrá elegir como buscar.
+	\UCpaso	El sistema buscara las rutas relacionadas con la peticion del usuario .
+	\UCpaso	el sistema mostrara una lista de las rutas encontradas.
+	\UCpaso	El usuario podrá seleccionar una ruta o podra repetir los pasos de busqueda desde el punto 4. 
+	\UCpaso	El sistema mostrara la informacion realcionada a la ruta que se selecciono .
+	\UCpaso El usuario podra imprimer la informacion precionando en el boton imprimir.
+	\UCpaso	El usuario podra terminar precionando en el boton finalizar.
+	\UCpaso	FIN
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{Ruta no encontrada.}
+	\UCpaso El sistema validara la operación.
+	\UCpaso	El sistema no encuentra ruta.
+	\UCpaso	El sistema muestra mensaje “no se encontraron rutas”.
+	\UCpaso	El usuario presionara aceptar para cerrar mensaje.
+	\UCpaso	El capturista podrá modificar la información desde el punto 4 de la trayectoria principal.
+	\UCpaso	Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{No selecciono datos de busqueda.}
+	\UCpaso El sistema validara la operación.
+	\UCpaso	El sistema no encuentra datos para buscar.
+	\UCpaso	El sistema muestra mensaje “Falta información requerida”.
+	\UCpaso	El usuario presionara aceptar para cerrar el mensaje.
+	\UCpaso	El usuario podrá proporcionar informacion desde el  punto 4 de la trayectoria principal.
+	\UCpaso	Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

@@ -1,0 +1,97 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU8}{Dar de Alta Plantas de Composta}{
+	Cuando un actor requiera dar de alta una planta de composta, el actor podra entrar al sistema para que este llene los datos necesarios para registrar una planta de composta, el sistema le mostrára los datos que ha proporcionado el actor, dara la opción de "registrar planta de composta" e imprimira en pantalla los datos finales. 
+	
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Miguel Ángel Medina Zarazua}
+	\UCitem{Modificado}{09 - Nov - 2015}
+	\UCitem{Revisor}{Ivan Baltazar Camacho}
+	\UCitem{Revisado}{9 - Nov - 2015}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Pendiente por aprobar}
+	\UCitem{Madurez}{Baja}
+	\UCitem{Volatilidad}{Media}
+	\UCitem{Dificultad}{Alta}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Capturista}
+	\UCitem{Propósito}{Llevar un control de las plantas de composta,así como  la ubicacion de las mismas.
+	}
+	\UCitem{Entradas}{id de la planta de composta, nombre, telefono,delegación, calle, número de calle, código postal }
+	\UCitem{Salidas}{Se muestran los datos con los que el La planta de composta fue registrada asi como un mensaje de registro exitoso.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla Y base de datos.}
+	\UCitem{Precondiciones}{No debe existir un regitro previo de la planta de composta}
+	\UCitem{Postcondiciones}{La planta de composta es registrada en el sistema.}
+	\UCitem{Errores}{Que la planta de composta ya exista.}
+	\UCitem{Fuentes}{Manual de Usuario SIRS.}
+	\UCitem{Observaciones}{ El sistema debe asignar Id de composta ya que asi se evitaran errores posteriores,trayectorias alternas no muestran hacia donde se continuaran al finalizar ,debe de haber mas usuarios que puedan dar de alta las plantas de composta.}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Solicita dar de alta una planta de composta presionando el botón Registrar
+	Planta de composta de la \IUref{UI5}{Gestionar Planta de composta}.
+	\UCpaso Solicita la información mostrando la \IUref{UI1}{Registrar planta de composta}.
+	\UCpaso[\UCactor] Proporciona los datos siguientes: id de la planta de composta, nombre,telefono, direccion con los sigueintes datos: Delegación, calle, número y código postal
+	\UCpaso Verifica que no existan campos requeridos vacios \Trayref{A}.
+	\UCpaso El sistema verifica que no exista registro previo de la planta de composta \Trayref{B}.
+	\UCpaso El sistema verifica que que la Delegación exista en la BD \Trayref{C}.
+	\UCpaso El sistema verifica que la calle tenga un fomrato correcto \Trayref{D}.
+	\UCpaso El sistema verifica que Nombre tenga un formato correcto \Trayref{E}
+	\UCpaso El sistema verifica que el teléfono tenga formato correcto. \Trayref{F}.
+	\UCpaso El sistema agrega el registro de la nueva planta de composta.
+	\UCpaso El sistema notifica que la operación se realizó con éxito.
+	\UCpaso Fin.
+	
+	
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{Campos requeridos vacíos.}
+	\UCpaso El sistema identifica que existen campos requeridos vacíos.
+	\UCpaso El sistema muestra el mensaje de "Campos vacíos requeridos".
+	\UCpaso El actor presiona el botón "aceptar".
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{Planta de composta registrada previamente.}
+	\UCpaso El sistema identifica que la planta de composta ya está registrado en el sistema.
+	\UCpaso El sistema muestra el mensaje "La planta de composta existente".
+	\UCpaso El actor presiona el boton de "aceptar".
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{La delegacion no existe en la Base de datos}
+	\UCpaso El sistema identifica queLa delegación no existe.
+	\UCpaso El sistema muestra el mensaje "Delegacion incorrecta".
+	\UCpaso El actor presiona el boton de "aceptar".
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{D}{Formato de calle incorrecto.}
+	\UCpaso El sistema identifica que la calle tiene formato incorrecto.
+	\UCpaso El sistema muestra el mensaje "Formato de calle incorrecto".
+	\UCpaso El capturista presiona el botón “aceptar”
+	\UCpaso. Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{E}{Formato de Nombre incorrecto.}
+	\UCpaso El sistema identifica que el nombre tiene longitud y/o carácteres no válidos.
+	\UCpaso El sistema muestra el mensaje "Formato no válido para nombre".
+	\UCpaso El capturista presiona el botón “aceptar”
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{F}{Formato de telefono no válido)}
+	\UCpaso El sistema identifica que el telefono tiene un formato no reconocible.
+	\UCpaso El sistema muestra el mensaje "Formato de teléfono no válido".
+	\UCpaso El capturista presiona el botón “aceptar”
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

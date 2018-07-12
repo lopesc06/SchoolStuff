@@ -1,0 +1,76 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU1}{Alta de un vehículo de recolección}{
+	El actor podrá entrar al sistema cuando una nueva unidad  que sea capaz de llevar a cabo la recolección de residuos solidos  necesite darse de alta ,de esta forma se le mostrarán los datos necesarios para registrar el vehículo,registrara el vehículo y le imprimirá en pantalla los datos que se registraron
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.1}
+	\UCitem{Autor}{Arturo Escutia López}
+\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Revisor}{Miguel Angel Medina Zarazúa}
+\UCitem{Modificado}{20 - Mayo - 2016}
+	\UCitem{Status}{Revisado}
+	\UCitem{Aprobado}{Aprobado}
+	\UCitem{Madurez}{Media}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Baja}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{Director de Proyectos de Agua, Suelo y Residuos, Asesor técnico, Capturista ,Subdirector de Sistemas}
+	\UCitem{Propósito}{Permitir agregar un nuevo vehículo al sistema  para  asignarle  sus  rutas correspondientes  y pueda llevar a cabo la recolección de residuos.  }
+	\UCitem{Entradas}{Matricula,Kilometraje,modelo del vehiculo,Capacidad,Peso y Tipo de vehículo recolector}
+	\UCitem{Salidas}{Matricula,Kilometraje,modelo del vehiculo,Capacidad,Peso y Tipo de vehículo recolector}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla }
+	\UCitem{Precondiciones}{No debe existir previamente un registro previo de dicho vehiculo el cual se desea dar de alta en la base de datos}
+	\UCitem{Postcondiciones}{El vehículo quedara registrado en la base de datos si no existe un registro anterior asociado a dicho vehículo.}
+	\UCitem{Errores}{El vehículo es registrado con datos incorrectos.}
+	\UCitem{Fuentes}{Pagina de SMA}
+	\UCitem{Observaciones}{"teclea la informacion del vehiculo que desea registrar"
+		¿Qué información se desea registrar?, falta cada dato a validar, aparte de lo que posteriormente mencionas,
+		Despues del mensaje regstro exitoso que hara le sistema? redireccionara a algun lado, o solo es un mensaje donde puedo apretar un boton aceptar o salir}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+
+	\UCpaso Muestra la \IUref{UI}{Registro de Vehículo recolector} con los campos necesarios a llenar para registrar un vehículo.
+	
+	\UCpaso[\UCactor] Teclea la información del vehículo que desea registrar \BRref{Campos vacíos} \Trayref{B}\label{CU17SeleccionarSeminario}.
+	
+	\UCpaso Verifica que  los datos cumplan con el formato establecido \BRref{Capacidad mayor a 0} \Trayref{C}.
+	
+	
+	\UCpaso Verifica que el vehiculo que se esta registrando no existe actualmente en el sistema \BRref{Verificar vehiculo en el sistema} \Trayref{D}.
+	
+	\UCpaso Registra los datos del vehiculo recolector.
+	
+	\UCpaso Despliega el los datos registrados del vehiculo y  el mensaje
+	 {\bf MSG1-} ``Registro exitoso'' en la \IUref{UI}{Registro de vehículo exitoso}.
+	
+	
+\end{UCtrayectoria}
+	
+	\begin{UCtrayectoriaA}{B}{Campos vacíos}
+	\UCpaso [\UCactor] no ingresa  todos los campos del registro .
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Registrar}.
+	\UCpaso Muestra el Mensaje {\bf MSG3-}``Complete todos  los Campos Vacíos''.
+	\UCpaso Continua en el paso 3 del \UCref{CU17}.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{capacidad mayor a 0}
+	\UCpaso [\UCactor] Ingresa una cantindad menor o igual a 0 .
+	\UCpaso[\UCactor] Oprime el botón \IUbutton{Registrar}.
+	\UCpaso Muestra el Mensaje {\bf MSG4-}``La capacidad del vehículo debe ser un numero mayor a 0''.
+
+	\UCpaso Continua en el paso 3 del \UCref{CU17}.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{D}{Verificar vehiculo en el sistema}
+	\UCpaso Muestra el Mensaje {\bf MSG5-}``El vehículo que intenta registrar ya ha sido dado de alta en el sistema''.
+	\UCpaso Continúa en el paso 3 del \UCref{CU17}.
+\end{UCtrayectoriaA}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.

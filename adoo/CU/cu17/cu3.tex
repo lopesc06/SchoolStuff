@@ -1,0 +1,79 @@
+%-------------------------------------- COMIENZA descripción del caso de uso.
+\begin{UseCase}{CU3}{Dar de Alta Chofer}{
+	Cuando se requeire registrar un chofer destinado a un vehiculo recolector de residuos, el actor podra entrar al sistema para que este llene un formulario con los datos de , nombre, apellido(s) CURP,No.licencia, telefono y asignarle un no.de conductor, el sistema mostrara los datos correspondietes y lo registrara en el sistema.
+
+
+}
+	%---------------------------------------------------------
+	% Datos de gestión del CU.
+	\UCitem{Versión}{0.3}
+	\UCitem{Autor}{Miguel Ángel Medina Zarazua}
+	\UCitem{Modificado}{27 - Nov - 2015}
+	\UCitem{Revisor}{Ivan Baltazar Camacho}
+	\UCitem{Revisado}{30 - Nov - 2015}
+	\UCitem{Status}{Aprobado}
+	\UCitem{Aprobado}{30 - Nov - 2015}
+	\UCitem{Madurez}{Media}
+	\UCitem{Volatilidad}{Baja}
+	\UCitem{Dificultad}{Alta}
+	\UCitem{Prioridad}{Alta}
+	
+	%---------------------------------------------------------
+	% Datos del CU
+	\UCitem{Actor}{1er Capturista de la DPASR}
+	\UCitem{Propósito}{Llevar un control sobre los conductores que tiene asignado un(Varios) vehiculo(s) de recolección de residuos.}
+	\UCitem{Entradas}{Nombre(s), Apellido Paterno o Materno,
+		CURP, No. Licencia, telefono celular, teléfono casa, correo electrónico.}
+	\UCitem{Salidas}{Se muestran los datos con lo que el conductor fue registrado as
+		como un mensaje e registro exitoso.}
+	\UCitem{Origenes}{Teclado y mouse.}
+	\UCitem{Destinos}{Pantalla Y base de datos.}
+	\UCitem{Precondiciones}{El conductor no debe estar registrado en el sistema.}
+	\UCitem{Postcondiciones}{El conductor es registrado en el sistemas.}
+	\UCitem{Errores}{Que el conductor ya exista en el sistema.}
+	\UCitem{Fuentes}{Manual de Usuario SIRS.}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Usuario  y Contraseña en el sistema vía teclado en la  \IUref{UI}{Pantalla  login de usuarios}.(Incluye CU Login Usuario).
+	
+	\UCpaso[\UCactor] Solicita dar de alta un Conductor seleccionando la opcion Nuevo chofer  del Menú Vehiculos recolectores.
+	
+	
+	\UCpaso Solicita la información mostrando la \IUref{UI1}{Nuevo Conductor}.
+	\UCpaso[\UCactor] Proporciona los campos para  los datos siguientes: CURP, No. Licencia, Nombre, Apellido Paterno, Apellido Materno, teléfono y correo electronico.
+	\UCpaso Verifica que no existan campos requeridos vacíos  en aquellos campos que son obligatorios. \Trayref{A}.
+	\UCpaso El sistema verifica que no exista registro de dicho conductor en el sistema. \Trayref{B}.
+	\UCpaso El sistema verifica que el CURP tenga formato correcto. \Trayref{C}.
+	\UCpaso El sistema agrega el registro del nuevo Conductor.
+	\UCpaso El sistema notifica que la operación se realizó con éxito.
+	\UCpaso Fin.
+	
+	
+\end{UCtrayectoria}
+	
+\begin{UCtrayectoriaA}{A}{Campos requeridos vacíos.}
+	\UCpaso El sistema identifica que existen campos requeridos vacíos.
+	\UCpaso El sistema muestra el mensaje de "El Dato es obligatorio".
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{Conductor registrado anteriormente.}
+	\UCpaso El sistema identifica que el Conductor ya está registrado en el sistema.
+	\UCpaso El sistema muestra el mensaje "El conductor ya está registrado".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{C}{Formato de CURP incorrecto.}
+	\UCpaso El sistema identifica que el CURP tiene formato incorrecto.
+	\UCpaso El sistema muestra el mensaje "El formato del CURP es incorrecto".
+	\UCpaso El CU continua en el paso 3 de la trayectoria principal.
+	\UCpaso Fin de trayectoria.
+\end{UCtrayectoriaA}
+
+
+
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
